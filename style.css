@@ -1,0 +1,149 @@
+/* ----------------- RESET ----------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ----------------- var ----------------- */
+:root {
+	font-size: 62.5%;
+	--backgrond: #000;
+	--text-color: #fff;
+	--button: #8257e5;
+	--span: #8464e6;
+	--border: #29292e;
+	--border-menu-mobile: #a8a8b3;
+	--text-color-menu-mobile: #e1e1e6;
+}
+
+/* ----------------- GERAL ----------------- */
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: var(--backgrond);
+	font-size: 1.6rem;
+	color: var(--text-color);
+	font-family: 'Manrope', sans-serif;
+	overflow-x: hidden;
+}
+
+li,
+a,
+button {
+	list-style: none;
+	text-decoration: none;
+	color: var(--text-color);
+	border: none;
+	background: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.wrapper {
+	width: min(50rem, 100%);
+	margin-inline: auto;
+	padding-inline: 2.5rem;
+}
+
+/* ------------------------- HEADER ------------------------- */
+#header {
+	border-bottom: 0.1rem solid var(--border);
+}
+
+#header .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-block: 3.7rem 2.5rem;
+}
+
+#header .wrapper .navigation {
+	display: none;
+}
+
+/* ------------------------- dropdown ------------------------- */
+
+#header .navigation.active {
+	display: flex;
+	background: var(--backgrond);
+	position: absolute;
+	top: 10.2rem;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 10.2rem);
+	z-index: 1000;
+}
+
+#header .navigation ul {
+	width: 100%;
+}
+
+#header .navigation li {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	border-bottom: 1px solid var(--border);
+	width: 100%;
+}
+
+#header .navigation a {
+	width: min(50rem, 100%);
+	display: block;
+	padding-block: 1.7rem;
+	padding-left: 3rem;
+	text-align: left;
+	color: var(--text-color-menu-mobile);
+}
+
+/* ------------------------- BUTTON MENU ------------------------- */
+
+/* .menu-button {
+	position: relative;
+	justify-content: center;
+	width: 2.4rem;
+	height: 0.8rem;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+} */
+
+/* .icon-burger {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	transition: all.5s ease-in-out;
+} */
+
+/* .icon-burger::before,
+.icon-burger::after {
+	position: absolute;
+	content: '';
+	background: var(--span);
+	width: 1.6rem;
+	height: 0.2rem;
+	transition: all 0.5s ease-in-out;
+} */
+
+/* .icon-burger::after {
+	width: 2.4rem;
+	transform: translateY(-1rem);
+} */
+
+/* animate */
+
+/* .navigation.active + .icon-burger::before {
+	transform: rotate(45deg);
+} */
+
+/* .navigation.active .icon-burger::after {
+	transform: rotate(-45deg);
+} */
