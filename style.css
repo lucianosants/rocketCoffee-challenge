@@ -29,11 +29,12 @@ body {
 }
 
 body {
-	background: var(--backgrond);
+	background-color: var(--backgrond);
 	font-size: 1.6rem;
 	color: var(--text-color);
 	font-family: 'Manrope', sans-serif;
-	overflow-x: hidden;
+	overflow-x: auto;
+	position: relative;
 }
 
 li,
@@ -113,7 +114,7 @@ button {
 }
 
 /* ------------------------- BUTTON MENU ------------------------- */
-.menu-button {
+.button-menu {
 	position: relative;
 	display: flex;
 	/* border: 1px solid white; */
@@ -144,12 +145,79 @@ button {
 
 /* ---- animate ------- */
 
-.menu-container.open .icon-burger {
+.container-menu.open .icon-burger {
 	transform: rotate(315deg);
 }
 
-.menu-container.open .icon-burger::before {
+.container-menu.open .icon-burger::before {
 	transform: rotate(275deg);
 	width: 2.4rem;
 	top: -0.7rem;
 }
+
+/* ------------------------- MAIN ------------------------- */
+#main {
+	text-align: center;
+}
+
+#main #home h2 {
+	font-size: 3rem;
+	width: 37, 3rem;
+	margin-inline: auto;
+	font-weight: 600;
+	line-height: 4.1rem;
+	letter-spacing: 0.2rem;
+	margin-top: 8.85rem;
+}
+
+#main #home .button-coffee {
+	padding: 1rem 3rem;
+	border-radius: 0.6rem;
+	border: 0.1rem solid var(--button);
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+#main #home .container-main-button {
+	margin-block: 8.8rem;
+}
+
+#main #titles {
+	margin-bottom: 2.5rem;
+}
+
+#main #titles h2 {
+	font-size: 5rem;
+	font-weight: 700;
+	line-height: 6.83rem;
+	letter-spacing: -0.03rem;
+}
+
+#main #titles .stroke-title {
+	color: var(--backgrond);
+	text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+		-1px 1px 0 var(--button), 1px 1px 0 var(--button);
+	letter-spacing: -0.03rem;
+}
+
+/* ------------------------- FOOTER ------------------------- */
+
+#footer img {
+	width: 100%;
+}
+
+body::after {
+	content: '';
+	position: absolute;
+	/* bottom: 0; */
+	width: 100%;
+	top: 0;
+	height: calc(100% - 70rem);
+
+	background-color: red;
+	z-index: -1;
+}
+
+/* ------------------------- BLUR MOBILE ------------------------- */
