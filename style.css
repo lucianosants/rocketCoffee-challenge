@@ -99,6 +99,10 @@ button {
 	width: 100%;
 }
 
+#header .navigation a:focus {
+	border-left: 0.5rem solid var(--button);
+}
+
 #header .navigation a {
 	width: min(50rem, 100%);
 	display: block;
