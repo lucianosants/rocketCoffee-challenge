@@ -209,27 +209,38 @@ button {
 }
 
 /* ------------------------- FOOTER ------------------------- */
+#footer .wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
 #footer {
 	background-size: contain;
 	text-align: center;
 	position: relative;
+	height: 16rem;
 }
 
 #footer::before {
 	position: absolute;
 	content: '';
 	width: 100%;
+	/* height: calc(100% - 17rem); */
 	height: 100%;
 	right: 0;
-	top: 0;
+	top: 17rem;
 	background: rgb(130, 87, 229);
-	background: radial-gradient(
-		circle,
-		rgba(130, 87, 229, 1) 0%,
-		rgba(11, 10, 9, 0.0984768907563025) 100%
+	background-image: linear-gradient(
+		to bottom,
+		#8257e5,
+		#7f3496,
+		#611f56,
+		#361427,
+		#000000
 	);
 	opacity: 0.5;
 	filter: blur(6.3rem);
+	transform: scaleY(2);
 }
 
 #footer img {
