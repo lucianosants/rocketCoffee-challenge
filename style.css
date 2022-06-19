@@ -226,7 +226,6 @@ button {
 	position: absolute;
 	content: '';
 	width: 100%;
-	/* height: calc(100% - 17rem); */
 	height: 100%;
 	right: 0;
 	top: 11.9rem;
