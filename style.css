@@ -203,21 +203,13 @@ button {
 }
 
 /* ------------------------- FOOTER ------------------------- */
+#footer {
+	background: url(./assets/blur-mobile.png);
+	background-size: contain;
+}
 
 #footer img {
 	width: 100%;
-}
-
-body::after {
-	content: '';
-	position: absolute;
-	/* bottom: 0; */
-	width: 100%;
-	top: 0;
-	height: calc(100% - 70rem);
-
-	background-color: red;
-	z-index: -1;
 }
 
 /* ------------------------- BLUR MOBILE ------------------------- */
