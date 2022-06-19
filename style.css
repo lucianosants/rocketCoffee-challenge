@@ -66,22 +66,25 @@ button {
 	padding-block: 3.7rem 2.5rem;
 }
 
-#header .wrapper .navigation {
-	display: none;
-}
-
 /* ------------------------- dropdown ------------------------- */
-
-#header .navigation.active {
-	display: flex;
+#header .wrapper .navigation {
 	background: var(--backgrond);
 	position: absolute;
 	top: 10.2rem;
 	right: 0;
 	left: 0;
 	width: 100%;
-	height: calc(100vh - 10.2rem);
+	height: 0;
+	visibility: hidden;
+	transition: 0.5s;
 	z-index: 1000;
+	overflow: hidden;
+}
+
+#header .navigation.active {
+	display: flex;
+	visibility: visible;
+	height: calc(100vh - 10.2rem);
 }
 
 #header .navigation ul {
@@ -102,48 +105,47 @@ button {
 	padding-block: 1.7rem;
 	padding-left: 3rem;
 	text-align: left;
-	color: var(--text-color-menu-mobile);
+	color: var(--border-menu-mobile);
 }
 
 /* ------------------------- BUTTON MENU ------------------------- */
-
-/* .menu-button {
+.menu-button {
 	position: relative;
+	display: flex;
+	/* border: 1px solid white; */
 	justify-content: center;
 	width: 2.4rem;
 	height: 0.8rem;
 	cursor: pointer;
-	transition: all 0.5s ease-in-out;
-} */
+}
 
-/* .icon-burger {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+.icon-burger {
 	transition: all.5s ease-in-out;
-} */
+	border-top: 0.2rem solid var(--button);
+	width: 2.4rem;
+	transition: all 0.5s ease-in-out;
+}
 
-/* .icon-burger::before,
-.icon-burger::after {
-	position: absolute;
+.icon-burger::before {
 	content: '';
-	background: var(--span);
+	display: flex;
+	margin-left: auto;
 	width: 1.6rem;
 	height: 0.2rem;
+	background: var(--button);
+	margin-top: 0.5rem;
 	transition: all 0.5s ease-in-out;
-} */
+	position: relative;
+}
 
-/* .icon-burger::after {
+/* ---- animate ------- */
+
+.menu-container.open .icon-burger {
+	transform: rotate(315deg);
+}
+
+.menu-container.open .icon-burger::before {
+	transform: rotate(275deg);
 	width: 2.4rem;
-	transform: translateY(-1rem);
-} */
-
-/* animate */
-
-/* .navigation.active + .icon-burger::before {
-	transform: rotate(45deg);
-} */
-
-/* .navigation.active .icon-burger::after {
-	transform: rotate(-45deg);
-} */
+	top: -0.7rem;
+}
